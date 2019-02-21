@@ -1,0 +1,22 @@
+My Edit Page
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+            <li><%= @recipe.ingredients %>
+            </li>
+
+        <form action="/recipes/<%= @recipe.id %>" method="post">
+            <input id="hidden" type="hidden" name="_method" value="patch">
+            <input type="text" name="name">
+            <input type="text" name="ingredients">
+            <input type="text" name="cook_time">
+            <input type= "submit">
+        </form>
+
+    </body>
+</html>
